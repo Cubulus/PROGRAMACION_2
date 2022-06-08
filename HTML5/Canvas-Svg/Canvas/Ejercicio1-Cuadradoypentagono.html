@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+</head>
+<body onload="dibujo1(), dibujo2()">
+    <!--
+        Realizar un cuadrado y un pentágono
+    -->
+<canvas id="cuadrado"></canvas>
+<canvas id="pentagono"></canvas>
+
+<script>
+    function dibujo1(){
+        var canvas=document.getElementById('cuadrado');
+        if (canvas.getContext) {
+                var cua = canvas.getContext('2d');
+                cua.fillStyle ="rgb(250,0,0)";
+                cua.fillRect(10, 10, 100, 100);
+        }
+    }
+
+    function dibujo2(){
+        var canvas=document.getElementById('pentagono');
+        if (canvas.getContext) {
+                var pen = canvas.getContext('2d');
+                pen.beginPath();
+                //pen.strokeStyle="blue";
+                pen.fillStyle="blue";
+                pen.moveTo(150,50);
+                pen.lineTo(200,90);
+                pen.lineTo(180.150);
+                pen.lineTo(120,150);
+                pen.lineTo(100,90);
+                pen.closePath();
+                pen.fill();
+        }
+    }
+
+</script>
+
+</body>
+</html>

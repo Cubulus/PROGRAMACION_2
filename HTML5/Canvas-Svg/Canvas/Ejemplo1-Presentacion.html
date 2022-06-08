@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion de Canvas</title>
+</head>
+
+<body onload="dibujarForma1(); dibujarForma2(), dibujarForma3()">
+    <canvas id="micanvas1"></canvas>
+    <canvas id="micanvas2"></canvas>
+    <canvas id="micanvas3"></canvas>
+    <!--
+        ------------------------CANVAS------------------------
+
+        Utilizado para dibujos gráficos usando secuencias de comandos (normalmente con base de JavaScript).
+        Posee una etiqueta exclusiva <canvas>, siendo una etiqueta contenedora gráfica. 
+            
+        Los usos principales serán:
+            -> Trazados, cajas, círculos, poliedros, desde una variedad de métodos.
+
+            -> Sus atributos principales son:
+                - alto (height)
+                - ancho (width)
+            
+            -> Por defecto, si los atributos anteriores no estan definidos, creará 300px ancho x 150px alto, predeterminado.
+
+            -> Tener precaución con las dimensiones que puedan establecerse en CSS, ya que si hay referencias distintas podria distorsionar.
+    -->
+    <script>
+        function dibujarForma1() {
+
+            var canvas = document.getElementById('micanvas1');
+            //Nos aseguramos de si es posible su ejecución en navegadores que lo soporten
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+/*
+            ***********Dibujo formas: Métodos y descripción**********
+                
+            fillRect  (x,y, ancho y alto)           Relleno de la forma
+            strokeRect(x,y, ancho y alto)           Dibuja el contorno
+            clearRect (x,y, ancho y alto)           Limpia, despeja el área, transparencias
+                
+            'x' + 'y' nos especifica la posición establecida en el canvas (posición relativa a su origen),
+            esde la esquina sup. izq. del rectángulo generado.
+*/
+                ctx.strokeStyle = 'rgb(250,0,0)';
+                ctx.fillStyle = 'rgb(250,0,0)';
+                ctx.fillRect(25, 25, 100, 100);
+                ctx.clearRect(45, 45, 60, 60);
+                ctx.strokeRect(50, 50, 50, 50);
+            }
+        }
+    </script>
+    <script>
+        function dibujarForma2() {
+
+            var canvas = document.getElementById('micanvas2');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+/*
+            **********Dibujar formas: Métodos y descripción***********
+            
+            beginPath()                                                 Reinicia el posicionamiento de la forma actual. Punto de inicio
+            moveTo(x,y)                                                 Inicia o enlaza el contorno de la forma con el punto dado o de inicio
+            closePath()                                                 Cierre del punto
+            fill()                                                      Relleno de la forma
+            stroke()                                                    Dibuja el contorno
+            arc(x,y,radio,anguloInicio,anguloFinal,sentidoAntiHorario)  Un punto x,y con el último punto del control dibujado, se unirán 
+                                                                        bajo un arco descrito por una circunferencia del círculo dado.
+                                                                        Empezará por el ángulo de inicio y acabando por el ángulo final.
+*/
+                ctx.beginPath(),
+                ctx.arc(75,75,50,0,Math.PI*2,true); //Círculo exterior
+                
+                ctx.moveTo(110,75);
+                ctx.arc(75,75,35,0,Math.PI,false); //Semi-círculo
+                
+                ctx.moveTo(65,65);
+                ctx.arc(60,65,5,0,Math.PI*2,true); //Círculo pequeño
+
+                ctx.moveTo(95,65);
+                ctx.arc(90,65,5,0,Math.PI*2,true); //Círculo pequeño
+
+                ctx.strokeStyle = 'rgb(250,0,0)';
+                ctx.stroke();
+            }
+        }
+    </script>
+    <script>
+        function dibujarForma3() {
+
+            var canvas = document.getElementById('micanvas3');
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                //Dibujar Lineas
+
+                for(i = 0; i<10; i++){
+
+                    ctx.beginPath();
+                    ctx.lineWidth = 1 + i;
+                    ctx.moveTo(5+i*14,5);
+                    ctx.lineTo(5+i*14,140);
+                    ctx.strokeStyle = 'rgb(250,0,0)';
+                    ctx.stroke();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

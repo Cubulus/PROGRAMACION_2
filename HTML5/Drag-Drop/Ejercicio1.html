@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-Drop Concepto</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!--
+        Dragable: Elemento a arrastrar, flase o true.
+        Ondragstar: Se produce cuando el usuario comienza a arrastrar el elemento.
+        Ondragend: Se produce cuando el usuario ha terminado de arrastrar el elemento.
+    -->
+    <input class="botonimagen" type="button" value="Arrastra"
+    draggable="true" ondragstart="start()" ondragend="end()"/>
+    <!--
+        Ondragover: Evento que se genera cuando el elemento arrastrado, se encuentra
+            en el destino de finalización.
+        Ondragleave: Evento que está generándose cuando el dragable sale del
+            inicio del evento.
+        Ondrop: Se produce cuando el elemento arrastrado está situado sobre el
+            destino definido.
+    -->
+    <div class="contenedor" ondragover="over()" ondragleave="leave()" ondrop="drop()">
+        <img src="images/papelera.png"/>
+    </div>
+</body>
+
+</html>

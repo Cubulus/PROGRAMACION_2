@@ -1,0 +1,12 @@
+.contenedor{
+    float: right;
+    margin: 20px;
+    width: 250px;
+    text-align: justify;
+}
+img{
+    width: 200px;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
