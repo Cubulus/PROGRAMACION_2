@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        EJERCICIO 4
+        Modificar el ejercicio anterior para que reciba también la tasa de IVA: 4,10,21. 
+        Por defecto será 21
+
+        EJERCICIO 5
+        Modificar el ejercicio anterior para poder pasar como argumento varios importes
+
+    -->
+    <script>
+        var importe = parseInt(window.prompt("Escribe el importe del precio original:"));
+        var dto = parseInt(window.prompt("Escribe el descuento aplicado:"));
+        var iva = parseInt(window.prompt("Escribe el IVA del artículo:"));
+
+
+        function calcular(importe, dto=0, iva=21){
+            return [(importe - (dto/100*importe))*(iva/100 +1)];
+        }
+        //document.write("1000€ con 10% dto, mas el 10% de iva, el importe es: "+calcular(1000,10,21)+"<br>");
+    
+        document.write("El artículo con precio original de " + importe + "€ con " + dto 
+        + " % dto, mas el "+ iva+ " % de iva, su precio final sería: "+calcular(importe,dto,iva)+"€ <br>");
+    
+    </script>
+</body>
+</html>

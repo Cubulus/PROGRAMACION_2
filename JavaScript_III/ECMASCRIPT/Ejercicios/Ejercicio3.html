@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        EJERCICIO 3
+        Crear una función que reciba un importe y un descuento. Este será optativo.
+        Mostrar por consola el importe total.
+
+    -->
+    <script>
+        function calcular(importe, dto=0){
+            return [importe - (dto/100*importe)];
+        }
+        document.write("1000€ con 10% dto el importe es: "+calcular(1000,10)+"<br>");
+    </script>
+</body>
+</html>

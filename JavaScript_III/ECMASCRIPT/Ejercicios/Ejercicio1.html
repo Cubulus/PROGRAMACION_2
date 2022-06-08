@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <!--
+        EJERCICIO 1
+        Utilizando la función arrow, calcular el factorial de un numero.
+    -->
+    <script>
+
+        var factorial=(numero)=>{
+            
+            var resultado=1;
+            for(let i=1;i<=numero;i++){
+                resultado*=i;
+            }
+            console.log(resultado);           
+        }
+
+        var num=window.prompt("Introduce un numero:");
+        //factorial(num);
+        console.log(factorial(num));
+
+    </script>   
+
+    <script> //Solución Toño
+
+        var factorial = (numero) => {
+            if (numero == 0) {
+                return 1
+            } else {
+                return numero * factorial(numero - 1)
+            }
+        }
+        document.write(factorial(4));
+
+    </script>
+</body>
+
+</html>

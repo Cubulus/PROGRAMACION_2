@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Palabras</title>
+    <script src="js/script3.js"></script>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body>
+    <!--
+        Ejercicio:
+        Montar aplicación de contador de palabras, desde la entrada de un campo de formulario,
+        y nos muestre como resultados: la primera, la última, el número de palabras y su inversión del texto.
+    -->
+
+    <div class="container">
+        <form>
+            <label>Escribe tu frase favorita</label>
+            <input type="text" id="frase"/>
+            <div>
+                <textarea id="resultado" cols="50" rows="10"></textarea>
+            </div>
+            <div>
+                <button type="button" onclick="contador()">Contador</button>
+                <button type="button" onclick="reiniciar()">Reiniciar</button>
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
