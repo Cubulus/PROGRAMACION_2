@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de simulacion laboral</title>
+</head>
+
+<body>
+    <h3>Ejercicio: El departamento de calidad ha detectado que los faros, referenciados
+        por un id(º). Se ha detectado que los números pares estan defectuosos, los impares
+        se han de revisar. Cada 3 unidades, no funcionan.
+        Generar un script para el programa de la empresa, donde el empleado al introducir el id,
+        pueda saber:
+        *Impar=> Mandar a revisar al dpto. de Calidad.
+        *Par=> Defectuoso, mandar a despiece.
+        *Multiplos de tres=> No funciona, mandar a desperdicio.</h3>
+    <h4>Aplicar el módulo, es decir, el resto, para identificar pares o impares, asi como múltiplos de 3</h4>
+
+    <script>
+        var numero = parseInt(window.prompt("Introducir id del faro:"));
+
+        if((numero % 2 == 0) && (numero % 3 == 0)){
+            alert("Es par y múltiplo de 3 = Defectuoso, mandar a desperdicio");
+        }else if(!(numero % 2 == 0) && (numero %3 == 0)){
+            alert("Es impar y múltiplo de 3 = Mandar al Dpto. de Calidad (Desperdicio)");
+        }else if(!(numero %3 ==0) && (numero % 2 ==0)){
+            alert("No es múltiplo de 3, pero si es par = Funciona, con algún defecto");
+        }else{
+            alert("Ni par, ni múltiplo de 3 = Funciona, revisar en el Dpot. de Calidad");
+        }
+
+    </script>
+</body>
+
+</html>

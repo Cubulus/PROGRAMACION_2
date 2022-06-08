@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/codigo.js"></script>
+    <link rel="stylesheet" href="../Ejemplo1-Mensajes/css/styles.css">
+</head>
+
+<body>
+    <!--
+        A través de SweetAlert, saludarnos.
+    -->
+    <script>
+        swal({
+            title: "Hola soy:  "+nombre,
+            /*Aqui el "+" es un elemento de concatenacion, no de operador matematico*/
+            text: "Que tenga un bonito dia",
+            icon: "warning",
+            button: "Igualmente!",
+        });
+
+        document.write("<h2>Pues ya estaría</h2>");
+    </script>
+</body>
+
+</html>

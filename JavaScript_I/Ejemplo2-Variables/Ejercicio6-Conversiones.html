@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+</head>
+<body>
+    <script>
+        var dato = window.prompt("Escribe un nº decimal");
+        /*
+        parseFloat => 
+            Convierte el argumento, una cadena de texto, y la devuelve como un numero
+            de punto flotante. Si el primer caracter no se pudiera convertir en entero
+            o numero, parseFloat nos devuelve un Nan, es decir; la función toma la cadena
+            y trata de retornar un valor númerico decimal.
+        */
+        var real = parseFloat(dato);
+        /*
+        parseInt => 
+            Comprueba el primer argumento, cadena, e intenta devolver un numero entero
+            de la base especificada, si la hubiese. En definitva es muy parecido a 
+            parseFloat, con la salvedad de que aqui extrae unicamente aquella parte de la
+            cadena que pueda reconocer como entero.
+        */
+        var entero = parseInt(dato);
+
+        console.log("Dato "+dato+"Tipo: "+typeof(dato));
+        console.log("Real "+real+"Tipo: "+typeof(real));
+        console.log("Entero "+entero+"Tipo: "+typeof(entero));
+
+    </script>
+</body>
+</html>
