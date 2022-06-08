@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primos desde la itinerancia While</title>
+</head>
+
+<body>
+    <!--
+        Calcular el primer numero primo, a partir del 20, utilizando la estructura de control While
+    -->
+
+    <script>
+        
+        var encontrada = false;
+        var numero = 20;
+        
+        while (!encontrada) {
+            var esprimo = true;
+
+            for(var divisor = 2; divisor < numero; divisor++){
+                if(numero % divisor == 0){
+                    esprimo=false;
+                }
+            }
+            if(esprimo){
+                document.write("El primer numero primo a partir del nº 20 es: " + numero + "<br>");
+                encontrada=true;
+            }
+                numero++;       
+        }
+
+    </script>
+</body>
+
+</html>

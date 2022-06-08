@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Adivina un numero</title>
+</head>
+
+<body>
+    <!--
+        Que el usuario juegue a adivinar el numero entre el 1 y el 50, teniendo 6 intentos.
+    -->
+
+    <script>
+        var numero = parseInt(Math.random() * 50);
+        console.log(numero);
+        var intentos = 5;
+        var adivina = 0;
+    
+       // do {
+       //     intentos--;
+//Intentos
+//1ª condicion     
+       //     if (intentos>0) {
+       //         adivina = window.prompt("Intenta adivinar el numero oculto, entre 1 y 50:");
+       //     } else {
+       //         alert("Lo siento, ha agotado el numero de intentos!");
+       //     }
+
+       // }while (adivina == numero);
+        
+       // if (numero == adivina) {
+       //         alert("Enhorabuena! Ha adivinado el numero!!")
+      //  } else {
+       //         alert("Vuelva a intentarlo!")
+       // }
+        
+        do{
+            adivina=parseInt(window.prompt("Intenta adivinar el numero oculto, entre 1 y 50:"));
+            
+            if (adivina>numero) {
+                alert("Te has pasado, te quedan "+ (intentos--)+" intentos");
+
+            } else if(adivina<numero){
+                alert("Te has quedado corto, te quedan "+ (intentos--)+" intentos");
+            }
+        } while (adivina !=numero && intentos > 0);
+        
+        if (numero==adivina) {
+            alert("Enhorabuena!! Has acertado!!");
+        } else{
+            alert("Lo sentimos, has agotado el numero de intentos");
+        }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
